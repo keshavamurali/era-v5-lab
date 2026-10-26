@@ -5,7 +5,7 @@ doc_id,read,verdict,diseases,evidence,hex,note
 49d4a1847da4514b,full,clean,,,,Looks clean
 fb49b8c109fa0344,full,fix,C1,ಪ್ರವ at offset 15338,U+0CAA U+0CCD U+0CB0 U+0CB5,
 7fd06bf25bcaa6d1,full,fix,,11ಅಂಗಡಿ ಕೋಣೆ ಗಳ  at offset 129,U+0031 U+0031 U+0C85 U+0C82 U+0C97 U+0CA1 U+0CBF U+0020 U+0C95 U+0CCB U+0CA3 U+0CC6 U+0020 U+0C97 U+0CB3 U+0020,Need Space after numbers. 
-3ed53ea9d8c600a0,full,clean,D3, BIGGNEWS:  at offset 0,U+0042 U+0049 U+0047 U+0047,
+3ed53ea9d8c600a0,full,fix,D3, BIGGNEWS:  at offset 0,U+0042 U+0049 U+0047 U+0047,
 5eaafa2efe204fb3,full,drop,C4;C5,Tag results for Subr at offset 2; ಭಾರತ ತಂಡಕ್ಕೆ ಎರಡು ವಿಶ್ವಕಪ್ ಗೆದ್ದುಕೊಟ್ಟ at offset 960,U+0054 U+0061 U+0067 U+0020 U+0072 U+0065 U+0073 U+0075 U+006C U+0074 U+0073 U+0020 U+0066 U+006F U+0072 U+0020 U+0053 U+0075 U+0062 U+0072; U+0CAD U+0CBE U+0CB0 U+0CA4 U+0020 U+0CA4 U+0C82 U+0CA1 U+0C95 U+0CCD U+0C95 U+0CC6 U+0020 U+0C8E U+0CB0 U+0CA1 U+0CC1 U+0020 U+0CB5 U+0CBF U+0CB6 U+0CCD U+0CB5 U+0C95 U+0CAA U+0CCD U+0020 U+0C97 U+0CC6 U+0CA6 U+0CCD U+0CA6 U+0CC1 U+0C95 U+0CCA U+0C9F U+0CCD U+0C9F,
 54be2713642d1bc6,full,clean,,,,
 67249541e320149c,full,clean,,,,
@@ -32,7 +32,7 @@ db82df7f70efba79,full,fix,G2,ವಿಶ್ವಬ್ಯಾಂಕ್ನ at offset 5
 634f9d4743893171,full,fix,G1;A6;C4;G2;D3;C2;C5;C1,ವಣ ್ಸು at offset 13962; ಸಾಂಸ್ಕøತಿಕ at offset 17662; ರೈತ ಹೋರಾಟಗಾರ at offset 18733; ಟೆನೆಂಟ್ಗಳನ್ನು at offset 20168; Mass Media at offset 20357; ಸುದ್ದಿದಿನ.ಕಾಂ|ವಾಟ್ಸಾಪ್ at offset 20380; Title at offset 29540; Trending at offset 31906,U+0CB5 U+0CA3 U+0020 U+0CCD U+0CB8 U+0CC1; U+0CB8 U+0CBE U+0C82 U+0CB8 U+0CCD U+0C95 U+00F8 U+0CA4 U+0CBF U+0C95; U+0C9F U+0CC6 U+0CA8 U+0CC6 U+0C82 U+0C9F U+0CCD U+0C97 U+0CB3 U+0CA8 U+0CCD U+0CA8 U+0CC1,"Several site articles concatenated, legacy-font damage, site WhatsApp line repeated, headline/trending list at end"
 bade3820b74478ba,full,drop,F3;D4;C1,HGH ಯ ಅಂತರರಾಷ್ಟ್ರೀಯ at offset 0; ಗಮ್ಯಸ್ಥಾನ ದೇಶಕ್ಕೆ at offset 82; ಇನ್ನಷ್ಟು ದಯವಿಟ್ಟು ಇಲ್ಲಿ ಓದಿ at offset 1097,,machine-translated online HGH drug shipping page
 c472a3db00395ba6,full,fix,G2;C1;C4;C2;A6;C5,ಲುಕ್ನಲ್ಲೇ at offset 68; ಸುದ್ದಿದಿನ.ಕಾಂ|ವಾಟ್ಸಾಪ್| at offset 3058; ನರದೌರ್ಬಲ್ಯ ನಿವಾರಣೆಗೆ at offset 3092; ಸುದ್ದಿದಿನ.ಕಾಂ|ವಾಟ್ಸಾಪ್|9980 at offset 4138; ವೃತ್ತಾಂತದಿ೦ದ at offset 12490; Trending at offset 16800,U+0CB2 U+0CC1 U+0C95 U+0CCD U+0CA8 U+0CB2 U+0CCD U+0CB2 U+0CC7; U+0CB5 U+0CC3 U+0CA4 U+0CCD U+0CA4 U+0CBE U+0C82 U+0CA4 U+0CA6 U+0CBF U+0CE6 U+0CA6,several unrelated site articles joined plus related/trending headline lists; site WhatsApp lines repeated; lost ZWNJ; digit zero used as anusvara
-ecefe60eae2c0f7c,full,clean,G2,ರಾಹುಲ್ನನ್ನು at offset 140,U+0CB0 U+0CBE U+0CB9 U+0CC1 U+0CB2 U+0CCD U+0CA8 U+0CA8 U+0CCD U+0CA8 U+0CC1,Missing ZWNJ.
+ecefe60eae2c0f7c,full,fix,G2,ರಾಹುಲ್ನನ್ನು at offset 140,U+0CB0 U+0CBE U+0CB9 U+0CC1 U+0CB2 U+0CCD U+0CA8 U+0CA8 U+0CCD U+0CA8 U+0CC1,Missing ZWNJ.
 f0b634572a92b22e,full,fix,G2,ಕೇಮದ್ರ at offset 946,U+0C95 U+0CC7 U+0CAE U+0CA6 U+0CCD U+0CB0,Missing ZWNJ. Got changed to full letter.
 0a77c8c1b79335da,full,clean,,,,Short complete political news report
 dbbd14b33cfb0729,full,drop,C5;B5;C1;C3;C4;D3,Display85 at offset 0; |Display technology|| at offset 48; Deal of the day at offset 131; ತರಲು ತಯಾ at offset 537; ಬಜೆಟ್ ಸ್ಮಾರ್ಟ್ಫೋನ್ಗಳಿಗೆ ಭಾರತ at offset 546; Xiaomi Mi 10i at offset 1062,,"spec widget, English promo/footer, truncated teaser snippets of unrelated articles"
@@ -47,13 +47,13 @@ cc170cf886ead148,full,fix,C1;G2,ಮುಖಪುಟ at offset 0; ಸೆಕ್ರ�
 537c659abc80e1a6,full,fix,C1,Krishnaveni K| at offset 10,U+004B U+0072 U+0069 U+0073 U+0068 U+006E U+0061 U+0076 U+0065 U+006E U+0069,Byline/Last Modified header chrome before article
 a4153fd935d239d9,full,fix,C1,Last Modified at offset 19,U+004C U+0061 U+0073 U+0074 U+0020 U+004D U+006F U+0064 U+0069,Byline/Last Modified header chrome before article
 e427affbdf302a39,full,fix,G1,ಕರ್ನಾ ಟಕದ at offset 1445,U+0C95 U+0CB0 U+0CCD U+0CA8 U+0CBE U+0020 U+0C9F U+0C95 U+0CA6,Words split by spaces / letters lost from print layout
-cd952fa6c7f1582f,full,clean,G2,ರೆಸಾರ್ಟ್ಗೆ at offset 722,U+0CB0 U+0CC6 U+0CB8 U+0CBE U+0CB0 U+0CCD U+0C9F U+0CCD U+0C97 U+0CC6,news item
+cd952fa6c7f1582f,full,fix,G2,ರೆಸಾರ್ಟ್ಗೆ at offset 722,U+0CB0 U+0CC6 U+0CB8 U+0CBE U+0CB0 U+0CCD U+0C9F U+0CCD U+0C97 U+0CC6,news item. Missing ZWJ
 9fa0ba393422e3bb,full,fix,C1;G2;C4,Team Udayavani at offset 33; ಹುಮಾಯಿನ್ಪಾಷ at offset 965; ಇದನ್ನೂ at offset 508,U+0CB9 U+0CC1 U+0CAE U+0CBE U+0CAF U+0CBF U+0CA8 U+0CCD U+0CAA U+0CBE U+0CB7; U+0C87 U+0CA6 U+0CA8 U+0CCD U+0CA8 U+0CC2,English byline/date line and read-also link; print-layout word splits (e.g. split mid-word with spaces); lost ZWNJ. Unrelated link in the middle.
 76fdbcb28c49fc27,full,fix,C2;C4;G4;C1;C5,ಸುದ್ದಿದಿನ.ಕಾಂ|ವಾಟ್ಸಾಪ್ at offset 4830; ಕೊರೋನ ಲಸಿಕೆ ಪಡೆದ ಸಂಸದ at offset 4864; ೨೦೦೯ 2009 at offset 8188; Trending at offset 9013; ರಾಜಕೀಯ7 days ago at offset 9024,U+0CE8 U+0CE6 U+0CE6 U+0CEF U+0020 U+0032 U+0030 U+0030 U+0039,Several articles joined with site WhatsApp line and trending list
 30992a38a9e5f12f,full,clean,,,,"Short local news paragraph, no issues"
 6b7feb7d40104a01,full,fix,G2,ಜೆಡಿಎಸ್ನ at offset 142,U+0C9C U+0CC6 U+0CA1 U+0CBF U+0C8E U+0CB8 U+0CCD U+0CA8,Political news; ZWNJ lost before case suffixes
 b6c1c411be0519af,full,fix,C1;G2,ನಮ್ಮ ವೆಬ್ಸೈಟ್ ಬರವಣಿಗೆಗೆ at offset 2902; ವೆಬ್ಸೈಟ್ at offset 2907,U+0CB5 U+0CC6 U+0CAC U+0CCD U+0CB8 U+0CC8 U+0C9F U+0CCD,Copyright and share footer; ZWNJ lost
-f86bebb970ddf50e,full,fix,G1,ಭಯಂಕರತೆಯ್ನನೂ at offset 714,U+0CAD U+0CAF U+0C82 U+0C95 U+0CB0 U+0CA4 U+0CC6 U+0CAF U+0CCD U+0CA8 U+0CA8 U+0CC2,"Kuvempu novel chapter; a few reordered/broken conjuncts (ಮೈಗಳ್ಲಲಿ, ಪಕ್ಕದ್ಲಲಿ) from font conversion"
+f86bebb970ddf50e,full,fix,G1,ಭಯಂಕರತೆಯ್ನನೂ at offset 714,U+0CAD U+0CAF U+0C82 U+0C95 U+0CB0 U+0CA4 U+0CC6 U+0CAF U+0CCD U+0CA8 U+0CA8 U+0CC2,"Chapter from a Novel.a few reordered/broken conjuncts (ಮೈಗಳ್ಲಲಿ, ಪಕ್ಕದ್ಲಲಿ) from font conversion"
 450d74fdc31034db,full,fix,C1,‘ವಾರ್ತಾ ಭಾರತಿ’ ನಿಮಗೆ at offset 2602,,News article with site support-appeal footer
 296088b418958306,full,fix,G2,ಪಂಪ್ವೆಲ್ at offset 316,U+0CAA U+0C82 U+0CAA U+0CCD U+0CB5 U+0CC6 U+0CB2 U+0CCD,lost ZWNJ in loanword/name conjuncts
 bf21eb9f2a9511b6,full,fix,C1;F1;C4;G2;D3;C2;A6;C5,[email protected] at offset 7229; phone at offset 7251; ರೈತ ಹೋರಾಟಗಾರ `ಸಹಜಾನಂದ at offset 7276; ಟೆನೆಂಟ್ಗಳನ್ನು at offset 8711; Mass Media Foundation at offset 8900; ಸುದ್ದಿದಿನ.ಕಾಂ|ವಾಟ್ಸಾಪ್ at offset 8923; ಪಾವಿತ್ರö್ಯತೆಯನ್ನು at offset 15498; Title⟦U+000A⟧ಚಿತ್ರದುರ್ಗ at offset 18083,U+0C9F U+0CC6 U+0CA8 U+0CC6 U+0C82 U+0C9F U+0CCD U+0C97 U+0CB3 U+0CA8 U+0CCD U+0CA8 U+0CC1; U+0CAA U+0CBE U+0CB5 U+0CBF U+0CA4 U+0CCD U+0CB0 U+00F6 U+0CCD U+0CAF U+0CA4 U+0CC6 U+0CAF U+0CA8 U+0CCD U+0CA8 U+0CC1,"Several suddidina articles concatenated with author contact, site WhatsApp lines, headline/trending lists; legacy-font Latin letters in words"
@@ -115,7 +115,7 @@ c38abea7a3377c5b,full,fix,G2;C2;H3,"ಹೆಲಿಪೋರ್ಟ್ಗೆ at offs
 7305e6f80fd21c32,full,drop,D4;C1,ಅವಕಾಶಗಳನ್ನು ಕಸಿದುಕೊಳ್ಳಲು at offset 1221; ಪೋಸ್ಟ್ ಸಮಯ at offset 1631,,machine-translated corporate news with post-time footer
 3eefc99bdc576a0a,full,drop,F2;A6;D4;G2;G1,1. 2019 ರ ಅಬುಧಾಬಿ at offset 0; season ತುವಿನಲ್ಲಿ at offset 142; ಯಾಸ್ ಮರೀನಾದಲ್ಲಿ% ಗೆಲುವಿನ at offset 336; ಎಲ್ಆರ್ಒ at offset 605; uz ೋನ್ at offset 5050,U+0073 U+0065 U+0061 U+0073 U+006F U+006E U+0020 U+0CA4 U+0CC1 U+0CB5 U+0CBF U+0CA8 U+0CB2 U+0CCD U+0CB2 U+0CBF; U+0C8E U+0CB2 U+0CCD U+0C86 U+0CB0 U+0CCD U+0C92; U+0075 U+007A U+0020 U+0CCB U+0CA8 U+0CCD,Bad translation of current affairs quiz.
 4b1c1aba2c430bbf,full,fix,G2,ಮಾರ್ಚ್ನಲ್ಲಿ at offset 687,U+0CAE U+0CBE U+0CB0 U+0CCD U+0C9A U+0CCD U+0CA8 U+0CB2 U+0CCD U+0CB2 U+0CBF,Transport strike news; ZWNJ lost before suffixes
-cfc9f77e953b4aad,full,clean,G2,ರೋಮನ್ರಲ್ಲಿ at offset 546,U+0CB0 U+0CCB U+0CAE U+0CA8 U+0CCD U+0CB0 U+0CB2 U+0CCD U+0CB2 U+0CBF,"Almost clean, except for one loanword suffix issue."
+cfc9f77e953b4aad,full,fix,G2,ರೋಮನ್ರಲ್ಲಿ at offset 546,U+0CB0 U+0CCB U+0CAE U+0CA8 U+0CCD U+0CB0 U+0CB2 U+0CCD U+0CB2 U+0CBF,"Almost clean, except for one loanword suffix issue."
 854bdbbaea2f0a7e,full,fix,G2;A6,ಕ್ಯಾಟರ್ಸ್ಗಳಿಗೆ at offset 940; ಹಿಂಸೆಯಿAದ at offset 2240,U+0C95 U+0CCD U+0CAF U+0CBE U+0C9F U+0CB0 U+0CCD U+0CB8 U+0CCD U+0C97 U+0CB3 U+0CBF U+0C97 U+0CC6; U+0CB9 U+0CBF U+0C82 U+0CB8 U+0CC6 U+0CAF U+0CBF U+0041 U+0CA6,legacy-font damage (Latin A for ಂದ in a word); lost ZWNJ
 4a2026dbc4f536de,full,clean,,,,Local agriculture news
 611b4499989be3a0,full,clean,,,,"Short local news, clean"
