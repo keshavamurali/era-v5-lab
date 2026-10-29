@@ -2,8 +2,7 @@
 
 Pack: `ind-kn-fw2` (Kannada, 500 documents). Counts come from `labels.csv` (500 labelled rows).
 
-**Gold set used for the harm test:** the 118 documents of this pack that are labelled `clean` in `labels.csv`.
-1% of 118 is 1.18 documents, so a medicine passes only if it changes or drops at most 1 of them.
+**Gold set used for the harm test:** TBD
 
 **Built for a larger corpus too:** C2, C5 and G1 look at one document at a time. C1 counts lines per website
 (the host of the `url` column) and stores only an 8-byte hash per line, so a common real line that many sites use
