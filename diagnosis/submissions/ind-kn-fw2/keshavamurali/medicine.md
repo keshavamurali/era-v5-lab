@@ -62,13 +62,10 @@ run on a stand-in: the 118 documents of this pack that are labelled `clean` in `
        return '\n'.join(out)
    ```
 3. **Action:** fix the text.
-4. **Harm test:** 0 of 118 gold documents changed, 0 dropped (0.00%); ZWJ/ZWNJ audit and normal-form audit pass. **Pass.**
-   - Run with `harm_test_indic.py` on the stand-in gold set (see the top of this file).
-   - The medicine changes 19 of the 28 C2 documents and 21 documents in the whole pack.
-   - The other 2 have real repeats but no C2 label yet: `436fd1e4f828cb2a` (row 100), a 167-character paragraph
-     twice, and `aa2a3e5196ee932e` (row 365), a 42-character line twice.
-   - The first version (any line of 3 or more characters, 3 or more copies) changed only 7 C2 documents.
-     It missed the title-repeated-in-body pattern, and it could thin short repeated words in a larger corpus.
+4. **Harm test:** gold set of 45 documents (ind-kn-fw2 45), medicine.md sha256 583a1eab3b18; rule: changed or dropped at most 1%.
+   - Changed 0 of 45 (0.00%). Dropped 0 of 45 (0.00%). **PASS**
+   - ZWJ/ZWNJ audit: 0 changed documents with a different count. **PASS**
+   - Normal-form audit: 0 changed documents left NFC or lost a compatibility character. **PASS**
 5. **Side effects:**
    - Short repeated junk is not removed: `ಖರೀದಿಸಿ.` six times (row 369) and `ಚಿತ್ರಕೃಪೆ: rajkumar1220` five
      times (row 476). Medicine 3 catches such lines only when they repeat across a site's pages.
@@ -117,15 +114,10 @@ run on a stand-in: the 118 documents of this pack that are labelled `clean` in `
        return '\n'.join(l for i, l in enumerate(lines) if i not in drop)
    ```
 3. **Action:** fix the text (remove the block); drop the document when it is mostly a list.
-4. **Harm test:** 0 of 118 gold documents changed, 0 dropped (0.00%); ZWJ/ZWNJ audit and normal-form audit pass. **Pass.**
-   - Run with `harm_test_indic.py` on the stand-in gold set (see the top of this file).
-   - On its own, the medicine changes 9 of the 80 C5 documents.
-   - Together with the dash rule of Medicine 3, 57 of the 80 C5 documents are treated.
-   - An earlier version that used short lines alone changed 3 gold documents and failed:
-     - `54be2713642d1bc6` (row 9), a vachana poem;
-     - `73055b8f6994406f` (row 155), short news highlights;
-     - `2a971489e8068e9c` (row 373), a folk-tale credit block.
-   - Counting a leading `-` as a signal changed `03c55a28ac95ebbb` (row 151), a list of demands, so the dash was removed from the signals.
+4. **Harm test:** gold set of 45 documents (ind-kn-fw2 45), medicine.md sha256 583a1eab3b18; rule: changed or dropped at most 1%.
+   - Changed 0 of 45 (0.00%). Dropped 0 of 45 (0.00%). **PASS**
+   - ZWJ/ZWNJ audit: 0 changed documents with a different count. **PASS**
+   - Normal-form audit: 0 changed documents left NFC or lost a compatibility character. **PASS**
 5. **Side effects:**
    - `|` is a signal, and Kannada verse uses `|` and `||` as line ends. Song lines in `634f9d4743893171` (row 31), such as `ಯಾರೇನೆಂದರು ನಿನಗೆ ಸದ್ಗುರು ದೇವ ||`, are removed with the headline block next to them.
    - A real list of links, for example a reference list at the end of an article, is removed.
@@ -186,11 +178,10 @@ run on a stand-in: the 118 documents of this pack that are labelled `clean` in `
        return '\n'.join(l for l in t.split('\n') if not boiler(l))
    ```
 3. **Action:** fix the text (remove the lines).
-4. **Harm test:** 0 of 118 gold documents changed, 0 dropped (0.00%); ZWJ/ZWNJ audit and normal-form audit pass. **Pass.**
-   - Run with `harm_test_indic.py` on the stand-in gold set (see the top of this file).
-   - The medicine changes 113 of the 211 C1 documents and 118 documents in the whole pack.
-     Applied per site in `medicines.py`, it changes 112 and 117.
-   - The dash rule (c, d) alone touches 53 documents and no gold document.
+4.  **Harm test:** gold set of 45 documents (ind-kn-fw2 45), medicine.md sha256 583a1eab3b18; rule: changed or dropped at most 1%.
+   - Changed 0 of 45 (0.00%). Dropped 0 of 45 (0.00%). **PASS**
+   - ZWJ/ZWNJ audit: 0 changed documents with a different count. **PASS**
+   - Normal-form audit: 0 changed documents left NFC or lost a compatibility character. **PASS**
 5. **Side effects:**
    - A real Kannada bullet list that starts with an English word, such as `- WhatsApp ಮೂಲಕ…`, loses those lines.
    - A sentence that one site puts in many of its articles on purpose, such as a standard disclaimer, is removed.
@@ -222,9 +213,10 @@ run on a stand-in: the 118 documents of this pack that are labelled `clean` in `
        return unicodedata.normalize('NFC', out) if out != text else text
    ```
 3. **Action:** fix the text.
-4. **Harm test:** 0 of 118 gold documents changed, 0 dropped (0.00%); ZWJ/ZWNJ audit and normal-form audit pass. **Pass.**
-   - Run with `harm_test_indic.py` on the stand-in gold set (see the top of this file).
-   - The medicine changes 2 of the 27 G1 documents.
+4. **Harm test:** gold set of 45 documents (ind-kn-fw2 45), medicine.md sha256 583a1eab3b18; rule: changed or dropped at most 1%.
+   - Changed 0 of 45 (0.00%). Dropped 0 of 45 (0.00%). **PASS**
+   - ZWJ/ZWNJ audit: 0 changed documents with a different count. **PASS**
+   - Normal-form audit: 0 changed documents left NFC or lost a compatibility character. **PASS**
 5. **Side effects:**
    - The join restores valid bytes but not lost letters. If a letter was dropped together with the space, the joined word is still wrong.
    - Text that shows a sign on its own on purpose, such as a grammar lesson that writes `ಾ`, is joined to the word before it.
@@ -232,7 +224,12 @@ run on a stand-in: the 118 documents of this pack that are labelled `clean` in `
 
 ## All four in order
 
-`harm_test_indic.py` also runs the four rules one after another (C2, C5, C1, G1) on each gold document: 0 of 118 changed, 0 dropped, and both audits pass. **Pass.**
+4. **Harm test:** gold set of 45 documents (ind-kn-fw2 45), medicine.md sha256 583a1eab3b18; rule: changed or dropped at most 1%.
+   - Changed 0 of 45 (0.00%). Dropped 0 of 45 (0.00%). **PASS**
+   - ZWJ/ZWNJ audit: 0 changed documents with a different count. **PASS**
+   - Normal-form audit: 0 changed documents left NFC or lost a compatibility character. **PASS**
+
+
 
 ## Medicines rejected
 
