@@ -333,6 +333,41 @@ def test_folder_mode_exit_codes(tmp_path, capsys):
     assert cs.main(args + [str(tok), "--expect-dataset-version", "corpus-v1"]) == 1
 
 
+def test_damaged_files_are_fail_rows_and_the_other_files_and_shards_are_still_checked(tmp_path, capsys):
+    """A truncated or broken file (PR #60 review) is a FAIL that names the error, not a crash."""
+    make_run(tmp_path)
+    def cut(name, keep):
+        p = tmp_path / name
+        p.write_bytes(p.read_bytes()[:keep])
+    cut("code-go-train-000000.idx.npy", -8)
+    cut("code-go-train-000001.docs.parquet", 40)
+    cut("code-go-train-000002.bin", 100)
+    (tmp_path / "code-go-train-000003.quality_report.json").write_text("{not json")
+    want = {"code-go-train-000000": "code-go-train-000000.idx.npy readable",
+            "code-go-train-000001": "code-go-train-000001.docs.parquet readable",
+            "code-go-train-000002": ".bin has its 1024-byte header",
+            "code-go-train-000003": "code-go-train-000003.quality_report.json readable"}
+    for sid, name in want.items():
+        rows = cs.run_checks(tmp_path, sid)
+        assert name in by_status(rows, cs.FAIL), sid
+        assert "checks ran to the end" not in by_status(rows, cs.FAIL), sid
+    rows = cs.run_checks(tmp_path, "code-go-train-000000")  # the index is damaged; the .bin and .docs.parquet still checked
+    assert ".bin header magic" in by_status(rows, cs.PASS) and "docs.parquet doc_ids unique" in by_status(rows, cs.PASS)
+    assert cs.main([str(tmp_path)]) == 1
+    assert "4 shard(s)" in capsys.readouterr().out
+
+
+def test_a_missing_listed_file_fails_in_folder_mode_unless_subset(tmp_path, capsys):
+    make_run(tmp_path)
+    (tmp_path / "code-go-train-000000.docs.parquet").unlink()
+    name = "sample_metadata_sha256 (code-go-train-000000.docs.parquet)"
+    assert name in by_status(cs.run_checks(tmp_path, "code-go-train-000000"), cs.NOT_CHECKED)  # one shard: as before
+    assert name in by_status(cs.run_checks(tmp_path, "code-go-train-000000", missing_fails=True), cs.FAIL)
+    args = [str(tmp_path), "--expect-tokenizer", "p1536", "--expect-dataset-version", "test"]
+    assert cs.main(args) == 1
+    assert cs.main(args + ["--subset"]) == 0
+
+
 def test_a_real_rollover_run_passes(tmp_path, monkeypatch):
     """The real run_shards.py with a forced rollover (as in shards/tests/test_run_shards.py): the map passes, and so does
     every shard except what a test run cannot have (G6's baseline tokenizer, a made-up clean.py, no licence)."""
